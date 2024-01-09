@@ -1,0 +1,184 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stattributes</title>
+    <link rel="stylesheet" href="./css/foundation.css">
+    <link rel="stylesheet" href="./css/app.css">
+	<link rel="stylesheet" href="./css/fontawesome-all.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+	
+	<style type='text/css'>
+		.stat-base{
+			cursor:pointer;
+			position:relative;
+			touch-action: none;
+		}
+		.drag-icon{
+			position:absolute;
+			right:3px;
+			top:15px;
+			font-size:0.8em;
+			color:#444;
+		}
+		.ui-state-hover {
+		background:lightyellow;   
+		}
+	</style>
+  </head>
+  <body>
+    <div class="callout large primary">
+		<div class="row column text-center">
+			<h1>Stattributes</h1>
+			<h2 class="subheader">A simple tool for a sophisticated age</h2>
+		</div>
+	</div>
+	<div class="grid-container">
+	<div class="grid-x grid-margin-x" style="display:none">
+		<div class="cell shrink">
+			<select id="raceList">
+				<option>Loading Race List...</option>
+			</select>
+		</div>
+		<div class="cell shrink">
+			<select id="subRaceList">
+				<option>No Sub Races</option>
+			</select>
+		</div>
+		<div class="cell shrink">
+			<small id="raceNotes"></small>
+		</div>
+		
+	</div>
+	  
+		
+	  
+	 <div class='grid-x grid-margin-x'>
+		<div class="cell auto">
+			<div class="button-group">
+				<button id="rollAction" type="button" class="button expanded" data-type="1"><i class="far fa-play-circle"></i> 4d6 - Drop Lowest</button>
+				<button id="rollOptionsToggle" type="button" class="dropdown button arrow-only"  data-toggle="rollOptions" data-close-on-click>
+					<span class="show-for-sr">Show menu</span>
+				</button>
+			</div>
+			<div id="rollOptions" class="dropdown-pane" data-position="bottom" data-alignment="right" data-dropdown >
+				<div class="grid-x grid-margin-x">
+					<div class="cell small-12"><button id="rollDropLowest" class='roll-stats button expanded' type="button" data-type="1"><i class="far fa-play-circle"></i> 4d6 - Drop Lowest</button></div>
+					<div class="cell small-12"><button id="rollThree" class='roll-stats button expanded' type="button"  data-type="2"><i class="far fa-play-circle left"></i> 3d6 - Fixed</button></div>
+					<div class="cell small-12"><button id="rollBestOfThree" class='roll-stats button expanded' type="button"  data-type="3"><i class="far fa-play-circle left"></i> 3d6 - Best Of 3</button></div>
+					<div class="cell small-12"><button id="rolld20" class='roll-stats button expanded' type="button"  data-type="4"><i class="far fa-play-circle left"></i> d20 straight up</button></div>
+					<div class="cell small-12">
+						<div class="input-group">
+						  <input id="customRoll" class="input-group-field text-center" type="text" value="3d6,r1">
+						  <div class="input-group-button">
+							<button id="rollCustom" class='roll-stats button' type="button"  data-type="C"><i class="far fa-play-circle left" style='margin:0;padding:0;'></i> <span>Custom Roll</span></button>
+						  </div>
+						</div>
+						<small>n.b. Comma separated list. "4d6,r2,l2" - 4d6, re-roll 2 or lower, drop lowest 2.</small>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="cell auto text-right"><button id="undo" class='button' type="button" disabled="disabled"><i class="fa fa-undo"></i></button></div>
+	 </div>
+		  <div class="grid-x grid-margin-x">
+			<div id="box_str" class="cell small-4 medium-2 text-center">
+				<h4>
+					STR
+				</h4>
+				<h4 class='callout small stat-base' id="stat_1">--<i class="drag-icon fas fa-ellipsis-v"></i></h4>
+				<h4 class='callout small'>
+					<input class="mod text-center" id="mod_1" type="number" value="0" />
+				</h4>
+				<h4 class='callout stat-total small primary' id="total_1">--</h4>
+				<h6 class='callout stat-bonus small default' id="bonus_1"></h6>
+			</div>
+			<div  id="box_dex" class="cell small-4 medium-2 text-center">
+				<h4>
+					DEX
+				</h4>
+				<h4 class='callout small stat-base' id="stat_2">--<i class="drag-icon fas fa-ellipsis-v"></i></h4>
+				<h4 class='callout small'>
+					<input class="mod text-center" id="mod_2" type="number" value="0" />
+				</h4>
+				<h4 class='callout stat-total small primary' id="total_2">--</h4>
+				<h6 class='callout stat-bonus small default' id="bonus_2"></h6>
+			</div>
+			<div   id="box_con"class="cell small-4 medium-2 text-center">
+				<h4>
+					CON
+				</h4>
+				<h4 class='callout small stat-base' id="stat_3">--<i class="drag-icon fas fa-ellipsis-v"></i></h4>
+				<h4 class='callout small'>
+					<input class="mod text-center" id="mod_3" type="number" value="0" />
+				</h4>
+				<h4 class='callout stat-total small primary' id="total_3">--</h4>
+				<h6 class='callout stat-bonus small default' id="bonus_3"></h6>
+			</div>
+			<div  id="box_int" class="cell small-4 medium-2 text-center">
+				<h4>
+					INT
+				</h4>
+				<h4 class='callout small stat-base' id="stat_4">--<i class="drag-icon fas fa-ellipsis-v"></i></h4>
+				<h4 class='callout small'>
+					<input class="mod text-center" id="mod_4" type="number" value="0" />
+				</h4>
+				<h4 class='callout stat-total small primary' id="total_4">--</h4>
+				<h6 class='callout stat-bonus small default' id="bonus_4"></h6>
+			</div>
+			<div  id="box_wis" class="cell small-4 medium-2 text-center">
+				<h4>
+					WIS
+				</h4>
+				<h4 class='callout small stat-base' id="stat_5">--<i class="drag-icon fas fa-ellipsis-v"></i></h4>
+				<h4 class='callout small'>
+					<input class="mod text-center" id="mod_5" type="number" value="0" />
+				</h4>
+				<h4 class='callout stat-total small primary' id="total_5">--</h4>
+				<h6 class='callout stat-bonus small default' id="bonus_5"></h6>
+			</div>
+			<div  id="box_chr" class="cell small-4 medium-2 text-center">
+				<h4>
+					CHR
+				</h4>
+				<h4 class='callout small stat-base' id="stat_6">--<i class="drag-icon fas fa-ellipsis-v"></i></h4>
+				<h4 class='callout small'>
+					<input class="mod text-center" id="mod_6" type="number" value="0" />
+				</h4>
+				<h4 class='callout stat-total small primary' id="total_6">--</h4>
+				<h6 class='callout stat-bonus small default' id="bonus_6"></h6>
+			</div>
+		  </div>
+		<div class="grid-x grid-margin-x">
+				<div class="cell auto text-right">
+					<h4 style='height:55px'>
+						Total <small title="27 PBE = 75" class='fa fa-info-circle'></small>
+					</h4>
+				</div>
+				<div class="cell  small-4 medium-2 text-center">
+					<h4 class='callout small' id="stat_total">--</h4>
+				</div>
+			</div>
+	</div>
+	<footer>
+		Stattributes &copy; 2018. Adam Reynolds
+	</footer>
+	<script src="./js/vendor/jquery.js"></script>
+    <script src="./js/vendor/what-input.js"></script>
+    <script src="./js/vendor/foundation.min.js"></script>
+    <!--<script src="./js/app2.min.js"></script>-->
+	<script src="./js/app.js?v=1"></script>
+	<script src="./js/jq-dragdrop.min.js"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-473494-4"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-473494-4');
+	</script>
+  </body>
+</html>

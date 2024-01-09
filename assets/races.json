@@ -1,0 +1,187 @@
+{"races" : 
+	[
+		{ 	
+			"name" : "Aarakocra",
+			"mods" : "0,2,0,0,1,0",
+			"subRaces" : [],
+			"notes" : ""
+		},
+		{ 	
+			"name" : "Aasimar",
+			"mods" : "0,0,0,0,1,2",
+			"subRaces" : 
+			[
+				{ "name" : "Protector", "mods" : "0,0,0,0,1,2"},
+				{ "name" : "Scourge", "mods" : "0,0,1,0,0,2"},
+				{ "name" : "Fallen", "mods" : "1,0,0,0,0,2"}
+			],
+			"notes" : ""
+		},
+		{ 	
+			"name" : "Bugbear",
+			"mods" : "2,1,0,0,0,0",
+			"subRaces" : []
+		},
+		{ 	
+			"name" : "Dwarf",
+			"mods" : "0,0,0,0,0,0",
+			"subRaces" : 
+			[
+				{ "name" : "Hill", "mods" : "0,0,2,0,1,0"},
+				{ "name" : "Mountain", "mods" : "2,0,2,0,0,0"}
+			],
+			"notes" : ""
+		},
+		{ 	
+			"name" : "Dragonborn",
+			"mods" : "2,0,0,0,0,1",
+			"subRaces" : [],
+			"notes" : ""
+		},
+		{ 	
+			"name" : "Elf",
+			"mods" : "0,0,0,0,0,0",
+			"subRaces" : 
+			[
+				{ "name" : "Drow", "mods" : "0,2,0,0,0,1"},
+				{ "name" : "High", "mods" : "0,2,0,1,0,0"},
+				{ "name" : "Wood", "mods" : "0,2,0,0,1,0"}
+			],
+			"notes" : ""
+		},
+		{ 	
+			"name" : "Firbolg",
+			"mods" : "1,0,0,0,2,0",
+			"subRaces" : [],
+			"notes" : ""
+		},
+		{ 	
+			"name" : "Genasi",
+			"mods" : "0,0,0,0,0,0",
+			"subRaces" : 
+			[
+				{ "name" : "Air", "mods" : "0,1,2,0,0,0"},
+				{ "name" : "Earth", "mods" : "1,0,2,0,0,0"},
+				{ "name" : "Fire", "mods" : "0,0,2,1,0,0"},
+				{ "name" : "Water", "mods" : "0,0,2,0,1,0"}
+			],
+			"notes" : ""
+		},
+		{ 	
+			"name" : "Gnoll",
+			"mods" : "0,0,0,0,0,0",
+			"subRaces" : 
+			[
+				{ "name" : "Civilized", "mods" : "2,0,1,0,0,0"},
+				{ "name" : "Savage", "mods" : "2,0,0,0,1,0"}
+			],
+			"notes" : ""
+		},
+		{ 	
+			"name" : "Gnome",
+			"mods" : "0,0,0,0,0,0",
+			"subRaces" : 
+			[
+				{ "name" : "Deep", "mods" : "0,1,0,2,0,0"},
+				{ "name" : "Forest", "mods" : "0,1,0,2,0,0"},
+				{ "name" : "Rock", "mods" : "0,0,1,2,0,0"}
+			],
+			"notes" : ""
+		},
+		{ 	
+			"name" : "Goblin",
+			"mods" : "0,2,1,0,0,0",
+			"subRaces" : [],
+			"notes" : ""
+		},
+		{ 	
+			"name" : "Goliath",
+			"mods" : "2,0,1,0,0,0",
+			"subRaces" : [],
+			"notes" : ""
+		},
+		{ 	
+			"name" : "Halfling",
+			"mods" : "0,0,0,0,0,0",
+			"subRaces" : 
+			[
+				{ "name" : "Lightfoot", "mods" : "0,2,0,0,0,1"},
+				{ "name" : "Stout", "mods" : "0,2,1,0,0,0"}
+			],
+			"notes" : ""
+		},
+		{ 	
+			"name" : "Half-Elf",
+			"mods" : "0,0,0,0,0,2",
+			"subRaces" : [],
+			"notes" : "+1 in any two (excluding Chr)"
+		},
+		{ 	
+			"name" : "Half-Orc",
+			"mods" : "2,0,1,0,0,0",
+			"subRaces" : [],
+			"notes" : ""
+		},
+		{ 	
+			"name" : "Hobgoblin",
+			"mods" : "0,0,2,1,0,0",
+			"subRaces" : [],
+			"notes" : ""
+		},
+		{ 	
+			"name" : "Human",
+			"mods" : "1,1,1,1,1,1",
+			"subRaces" : [{ "name" : "Variant", "mods" : "0,0,0,0,0,0"}],
+			"notes" : "Variant gets +1 in any two and one feat."
+		},
+		{ 	
+			"name" : "Kenku",
+			"mods" : "0,2,0,0,1,0",
+			"subRaces" : [],
+			"notes" : ""
+		},
+		{ 	
+			"name" : "Kobold",
+			"mods" : "-2,2,0,0,0,0",
+			"subRaces" : [],
+			"notes" : ""
+		},
+		{ 	
+			"name" : "Lizardfolk",
+			"mods" : "0,0,2,0,1,0",
+			"subRaces" : [],
+			"notes" : ""
+		},
+		{ 	
+			"name" : "Orc",
+			"mods" : "2,0,1,-2,0,0",
+			"subRaces" : [],
+			"notes" : ""
+		},
+		{ 	
+			"name" : "Tabaxi",
+			"mods" : "0,2,0,0,0,1",
+			"subRaces" : [],
+			"notes" : ""
+		},
+		{ 	
+			"name" : "Tiefling",
+			"mods" : "0,0,0,1,0,2",
+			"subRaces" : [{ "name" : "Feral", "mods" : "0,2,0,1,0,0"}],
+			"notes" : ""
+		},
+		{ 	
+			"name" : "Triton",
+			"mods" : "1,0,1,0,0,1",
+			"subRaces" : [],
+			"notes" : ""
+		},
+		{ 	
+			"name" : "Yuan-Ti Pureblood",
+			"mods" : "0,0,0,1,0,2",
+			"subRaces" : [],
+			"notes" : ""
+		}
+		
+	]
+}

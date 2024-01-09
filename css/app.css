@@ -1,0 +1,66 @@
+html{position:relative;height:100%;}
+body{
+		padding-bottom:40px;
+		background-color:#151515;
+		color:#FFF;
+		height:100%;
+	}
+	h1,h2,h3,h4,h5,h6,input,select,button.button{
+		font-family: 'Josefin Sans', sans-serif;
+	}
+		h6.callout.stat-bonus{
+			margin-top:-17px;
+			padding-top:0.1rem;
+			padding-bottom:0.1rem;
+			background-color:#eee;
+			color:#444;
+		}
+		.callout.large{
+		padding-top:0;
+		padding-bottom:0;
+		background-color:#050505;
+		}
+		h1{
+		color:#A92F41;
+		}
+		.callout{
+		background-color:#B7B7B7;
+		}
+		
+		button.button{
+			border-radius:5px;
+		}
+		#rollCustom{
+			border-top-right-radius:5px;
+			border-bottom-right-radius:5px;
+		}
+		
+		#rollCustom span{
+			display:none;
+		}
+		
+		button#rollAction{
+			border-top-right-radius:0;
+			border-bottom-right-radius:0;
+		}
+		
+		button#rollOptionsToggle{
+			border-top-left-radius:0;
+			border-bottom-left-radius:0;
+		}
+		
+		#rollOptions{
+			background-color:#151515;
+		}
+		#rollOptions small{
+			font-size:0.6em;
+		}
+		
+		footer{
+			
+			width:100%;
+			font-size:8pt;
+			text-align:center;
+			color:#444;
+			height:20px;
+		}
